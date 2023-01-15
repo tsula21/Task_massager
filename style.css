@@ -962,6 +962,7 @@ body {
   border-radius: 50%;
   animation: loader1 1.5s cubic-bezier(0.77, 0, 0.175, 1) infinite;
 }
+
 @keyframes loader1 {
   from {
     transform: rotate(0deg);
@@ -1165,9 +1166,16 @@ body {
   }
   .happy_user_tab img {
   }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .carousel {
     overflow: hidden;
     scroll-behavior: smooth;
+    width: calc(286px * 3);
+    /* test */
   }
   .carousel.dragging {
     cursor: grab;
@@ -1184,6 +1192,19 @@ body {
   .reclam_item span {
     max-width: 150px;
   }
+  .white_space {
+    width: 36px;
+    height: 36px;
+  }
+  .white_space img {
+    max-width: 26px;
+    max-height: 26px;
+  }
+}
+@media (max-width: 876px) {
+  .carousel {
+    width: calc(286px * 2 + 13px);
+  }
 }
 @media (max-width: 762px) {
   .customer_span {
@@ -1198,5 +1219,11 @@ body {
   }
   .advantage h3 {
     text-align: center;
+  }
+}
+
+@media (max-width: 581px) {
+  .carousel {
+    width: calc(286px * 1.2 + 13px);
   }
 }

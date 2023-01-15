@@ -27,6 +27,7 @@ const arr = [
 const carousel = document.querySelector(".carousel");
 firstImg = carousel.querySelectorAll(".happy_users")[0];
 nextPrevIcons = document.querySelectorAll(".prev_next");
+
 let isDragStart = false,
   isDragging = false,
   prevPageX,
@@ -129,10 +130,9 @@ showAll.addEventListener("click", function () {
     //
     if (arr.length > 4) {
       setTimeout(function () {
-        loader.classList.remove("active"),
-          (showAll.style.display = "flex"),
-          // IF WE HAVE OTHER ITEMS IN ARRAY RENDER THEM ALL;
-          loadFAQ(arr);
+        loader.classList.remove("active"), (showAll.style.display = "flex");
+        // IF WE HAVE OTHER ITEMS IN ARRAY RENDER THEM ALL USEING FUNCTION;
+        // loadFAQ(arr);
       }, 2000);
       console.log("load more");
     } else {
@@ -144,6 +144,6 @@ showAll.addEventListener("click", function () {
     }
   } else {
     noMoreQuestions.classList.remove("active");
-    loadFAQ(arr.slice(0, 4));
+    // loadFAQ(arr.slice(0, 4));
   }
 });

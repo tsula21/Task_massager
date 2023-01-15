@@ -1239,4 +1239,7 @@ body {
   .review_stars {
     margin-bottom: 5.5px;
   }
+  .reviews_header button {
+    height: 40px;
+  }
 }

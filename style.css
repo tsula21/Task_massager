@@ -1233,4 +1233,10 @@ body {
     width: calc(286px * 1.2 + 13px);
     min-width: calc(286px * 1.2 + 13px);
   }
+  .total_reviews span {
+    display: block;
+  }
+  .review_stars {
+    margin-bottom: 5.5px;
+  }
 }

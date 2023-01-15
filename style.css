@@ -906,7 +906,6 @@ body {
   height: 100%;
   position: absolute;
   top: 0;
-  /* cursor: help; */
   opacity: 0;
 }
 .prev_next#left {
@@ -1168,13 +1167,19 @@ body {
   }
   .wrapper {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    /* flex-direction: column;
+    align-items: center; */
+  }
+  .prev_next {
+    height: 472px;
+    width: 100%;
+    position: unset;
   }
   .carousel {
     overflow: hidden;
     scroll-behavior: smooth;
     width: calc(286px * 3);
+    min-width: calc(286px * 3);
     /* test */
   }
   .carousel.dragging {
@@ -1204,6 +1209,7 @@ body {
 @media (max-width: 876px) {
   .carousel {
     width: calc(286px * 2 + 13px);
+    min-width: calc(286px * 2 + 13px);
   }
 }
 @media (max-width: 762px) {
@@ -1222,8 +1228,9 @@ body {
   }
 }
 
-@media (max-width: 581px) {
+@media (max-width: 620px) {
   .carousel {
     width: calc(286px * 1.2 + 13px);
+    min-width: calc(286px * 1.2 + 13px);
   }
 }
